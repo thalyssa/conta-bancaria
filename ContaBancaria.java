@@ -1,5 +1,4 @@
-import java.util.Scanner;
-public class ContaBancaria {
+public class ContaBancaria implements Conta {
   
    private String cliente;
    private int num_conta;
@@ -30,9 +29,9 @@ public class ContaBancaria {
     }
     
     public ContaBancaria(String cliente, int num_conta, float saldo){
-        cliente = this.cliente;
-        num_conta = this.num_conta;
-        saldo = this.saldo;
+        this.cliente = cliente;
+        this.num_conta = num_conta;
+        this.saldo = saldo;
     }
     
     public void saque (float sacado){
@@ -44,7 +43,7 @@ public class ContaBancaria {
     }
        
     public void deposito (float depositado){
-        this.saldo = saldo + depositado;
+        this.saldo = this.saldo + depositado;
     }
         
 
